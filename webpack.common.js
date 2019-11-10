@@ -17,6 +17,7 @@ module.exports = {
 				test: /\.(jpe?g|png|gif|svg)$/i,
 				include: [
 					path.resolve(__dirname, 'resources/css/images'),
+					path.resolve(__dirname, 'resources/icons'),
 				],
 				use: [
 					{

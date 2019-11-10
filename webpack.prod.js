@@ -8,6 +8,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = merge(common, {
 	mode: 'production',
@@ -29,6 +30,9 @@ module.exports = merge(common, {
 		}),
 		new MiniCssExtractPlugin({ filename: 'main.[contentHash].css' }),
 		new CleanWebpackPlugin(),
+		new CopyPlugin([
+			{ from: 'resources/documents/Elijah Watson Resume.pdf', to: 'resources/documents/[name].[ext]', toType: 'template' }
+		]),
 		new HtmlWebpackPlugin({
 			template: './index.html',
 			chunks: ['home'],
@@ -58,7 +62,7 @@ module.exports = merge(common, {
 						options: {
 							ident: 'postcss',
 							plugins: [
-								require('autoprefixer')({ grid: "autoplace" }),
+								require('autoprefixer')({ grid: 'autoplace' }),
 							]
 						}
 					}

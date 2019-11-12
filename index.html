@@ -12,13 +12,41 @@
 </head>
 
 <body>
-	<section class="home" id="home">
+	<section id="home">
 		<img class="home-background image-cover" src="${require('./resources/images/code-samples-blurred.png').src}"
 			srcset="${require('./resources/images/code-samples-blurred.png').srcSet}" alt="">
-		<div class="scrim center-wrapper">
+		<div class="scrim center-wrapper center-wrapper--both">
 			<div class="site-title">
 				<h1 class="name">Elijah Watson</h1>
 				<span class="title">Web Developer</span>
+			</div>
+		</div>
+	</section>
+	<section id="about">
+		<div class="center-wrapper center-wrapper--both">
+			<div class="center-content center-text">
+				<h2 class="section-title">About Me</h2>
+				<img class="headshot" src="${require('./resources/images/elijah-watson-headshot.png').src}"
+					srcset="${require('./resources/images/elijah-watson-headshot.png').srcSet}"
+					alt="Elijah Watson Headshot">
+				<div class="social-media-icons">
+					<a href="https://github.com/Elijah-Watson" target="_blank" rel="noopener noreferrer"
+						class="undecorated-link">
+						<img src="./resources/icons/github-icon.svg" class="icon" alt="GitHub icon" />
+					</a>
+					<a href="https://www.linkedin.com/in/Elijah-Watson" target="_blank" rel="noopener noreferrer"
+						class="undecorated-link">
+						<img src="./resources/icons/linkedin-icon.svg" class="icon" alt="LinkedIn Icon" />
+					</a>
+				</div>
+				<hr />
+				<p class="bio">Junior web developer dedicated to creating and optimizing the performance of efficient, user-friendly
+					websites. Looking
+					to apply creativity, technical skills, and critical thinking to all aspects of the development
+					process.</p>
+				<hr />
+				<a class="rounded-border-button blue undecorated-link"
+					href="resources/documents/Elijah Watson Resume.pdf" download>Download Resume</a>
 			</div>
 		</div>
 	</section>

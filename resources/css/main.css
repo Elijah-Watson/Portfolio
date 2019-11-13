@@ -34,6 +34,10 @@ h2 {
 	color: hsl(210, 100%, 56%);
 }
 
+h3 {
+	font-size: 2rem;
+}
+
 html {
 	font-size: 62.5%;
 }
@@ -197,8 +201,7 @@ body {
 	flex-wrap: wrap;
 
 	box-shadow: 0 0 0 0.2em hsl(0, 0%, 20%);
-	border-radius: 0.5em;
-	overflow: hidden;
+	border-radius: 0.75rem;
 }
 
 .skills-box {
@@ -208,9 +211,30 @@ body {
 	padding: 1em;
 }
 
+.skills-box-left {
+	border-radius: 0.75rem 0 0 0;
+}
+
+.skills-box-right {
+	border-radius: 0 0.75rem 0 0;
+}
+
 .skills-box-bottom {
 	flex: 0 0 100%;
 	width: 100%;
+	border-radius: 0 0 0.75rem 0.75rem;
+}
+
+.skills-box .skill {
+	margin-left: 0.5em;
+}
+
+.skills-box .skill .skill-title {
+	text-transform: none;
+}
+.skills-box .skill .skill-description {
+	font-size: 1.1em;
+	/* text-align: justify; */
 }
 
 .logo-boxes {
@@ -220,14 +244,24 @@ body {
 }
 
 .logo-box {
+	position: relative;
 	width: 12em;
 	height: 12em;
-	line-height: 12em;
 	text-align: center;
+	margin: 1em;
 	padding: 1em;
+
+	border-radius: 0.5em;
+	box-shadow: 0 0.1em 0.1em 0.15em hsla(0, 0%, 0%, 0.2);
 }
 
-.logo-box > img {
+.logo-box .logo-box-image {
 	width: 100%;
 	height: 100%;
+}
+
+.logo-box .logo-box-text {
+	font-size: 1.5em;
+	line-height: 1;
+	font-weight: bold;
 }

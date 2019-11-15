@@ -76,6 +76,13 @@ body {
 	text-decoration: none;
 }
 
+.undecorated-button {
+	background-color: unset;
+	color: unset;
+	border: unset;
+	line-height: unset;
+}
+
 .scrim {
 	position: absolute;
 	top: 0;
@@ -83,6 +90,7 @@ body {
 	height: 100%;
 	width: 100%;
 	background-color: hsla(0, 0%, 5%, 0.45);
+	color: hsl(0, 100%, 100%);
 }
 
 .rounded-border-button {
@@ -264,4 +272,84 @@ body {
 	font-size: 1.5em;
 	line-height: 1;
 	font-weight: bold;
+}
+
+#projects {
+	padding: 2rem 3rem;
+}
+
+.project {
+	font-size: 1.5rem;
+	position: relative;
+	width: 28rem;
+	height: 28rem;
+	margin: 1.5em;
+	border-radius: 0.75rem;
+	overflow: hidden;
+	cursor: pointer;
+}
+
+.project .project-background {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+}
+
+.project .scrim {
+	background-color: hsla(0, 0%, 20%, 0.9);
+}
+
+.project .project-cover {
+	position: absolute;
+
+	transform: translateY(0);
+	transition: transform 500ms ease-in-out;
+}
+
+.project:hover .project-cover {
+	transform: translateY(-100%);
+}
+
+.project .project-logo-container {
+	width: 70%;
+	height: 70%;
+}
+
+.project .project-info {
+	position: absolute;
+	padding: 1.5em 2em;
+
+	transform: translateY(100%);
+	transition: transform 500ms ease-in-out;
+}
+
+.project:hover .project-info {
+	transform: translateY(0);
+}
+
+.project .project-name {
+	font-size: 1.5em;
+	margin: 0 0 calc(2.5% + 0.2em);
+}
+
+.project .project-name .project-name-underline {
+	border-bottom: 0.2em solid hsl(210, 100%, 56%);
+}
+
+.project .project-description {
+	text-align: left;
+}
+
+.project .project-more {
+	display: inline-block;
+	margin: 2.5% 0 0;
+	animation: flick-right 750ms cubic-bezier(.55,.06,.68,.19) 250ms infinite alternate;
+}
+
+@keyframes flick-right {
+  from { transform: translateX(0); }
+  to   { transform: translateX(7%);}
 }

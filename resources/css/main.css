@@ -72,15 +72,20 @@ body {
 	text-align: center;
 }
 
-.undecorated-link {
+a.unformatted {
 	text-decoration: none;
 }
 
-.undecorated-button {
+button.unformatted {
 	background-color: unset;
 	color: unset;
 	border: unset;
 	line-height: unset;
+	text-align: left;
+}
+
+ul.unformatted {
+	list-style-type: none;
 }
 
 .scrim {
@@ -111,7 +116,8 @@ body {
 	border-color: hsl(210, 100%, 56%);
 }
 
-.rounded-border-button.blue:hover {
+.rounded-border-button.blue:hover,
+.rounded-border-button.blue:active {
 	color: hsl(0, 100%, 100%);
 	background-color: hsl(210, 100%, 56%);
 	border-color: hsl(210, 100%, 56%);
@@ -123,10 +129,43 @@ body {
 	border-color: hsl(0, 100%, 100%);
 }
 
-.rounded-border-button.white:hover {
+.rounded-border-button.white:hover,
+.rounded-border-button.white:active {
 	color: hsl(210, 100%, 56%);
 	background-color: hsl(0, 100%, 100%);
 	border-color: hsl(0, 100%, 100%);
+}
+
+.flipper {
+	perspective: 1000px;
+}
+
+.flipper.flipped .flipper-content {
+	transform: rotateY(180deg);
+}
+
+.flipper .flipper-content {
+	transition: transform 500ms ease-in-out;
+	transform-style: preserve-3d;
+
+	position: relative;
+}
+
+.flipper .flipper-front,
+.flipper .flipper-back {
+	backface-visibility: hidden;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.flipper .flipper-front {
+	transform: rotateY(0deg);
+}
+
+.flipper .flipper-back {
+	transform: rotateY(180deg);
 }
 
 #home {
@@ -284,9 +323,21 @@ body {
 	width: 28rem;
 	height: 28rem;
 	margin: 1.5em;
+	cursor: pointer;
+}
+
+.project.flipper .flipper-content {
+	width: 100%;
+	height: 100%;
+}
+
+.project.flipper .flipper-front,
+.project.flipper .flipper-back {
+	width: 100%;
+	height: 100%;
+
 	border-radius: 0.75rem;
 	overflow: hidden;
-	cursor: pointer;
 }
 
 .project .project-background {
@@ -309,7 +360,8 @@ body {
 	transition: transform 500ms ease-in-out;
 }
 
-.project:hover .project-cover {
+.project:hover .project-cover,
+.no-hover .project .project-cover {
 	transform: translateY(-100%);
 }
 
@@ -326,7 +378,8 @@ body {
 	transition: transform 500ms ease-in-out;
 }
 
-.project:hover .project-info {
+.project:hover .project-info,
+.no-hover .project .project-info {
 	transform: translateY(0);
 }
 
@@ -346,10 +399,57 @@ body {
 .project .project-more {
 	display: inline-block;
 	margin: 2.5% 0 0;
-	animation: flick-right 750ms cubic-bezier(.55,.06,.68,.19) 250ms infinite alternate;
+	animation: flick-right 750ms cubic-bezier(.55, .06, .68, .19) 250ms infinite alternate;
 }
 
 @keyframes flick-right {
-  from { transform: translateX(0); }
-  to   { transform: translateX(7%);}
+	from {
+		transform: translateX(0);
+	}
+	to {
+		transform: translateX(7%);
+	}
+}
+
+.project .project-specs {
+	padding: 1.5em 2em;
+	background-color: hsl(0, 0%, 20%);
+	color: hsl(210, 100%, 56%);
+}
+
+.project .center-content {
+	width: 100%;
+}
+
+.project .built-with {
+	font-size: 1.25em;
+	font-weight: bold;
+}
+
+.project .technology-list {
+	margin-left: 1.75em;
+	color: hsl(0, 100%, 100%);
+}
+
+.project .project-links {
+	font-size: 1.15em;
+}
+
+.project .project-links {
+	margin: 0.75em 0;
+}
+
+.project .project-links-list {
+	display: flex;
+	justify-content: center;
+}
+
+.project .project-links-list-item+.project-links-list-item::before {
+	content: "|";
+	margin: 0 0.25em;
+	color: hsl(0, 100%, 100%);
+}
+
+.project .project-specs a {
+	color: hsl(210, 100%, 56%);
 }

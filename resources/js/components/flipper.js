@@ -4,10 +4,11 @@
 export class Flipper {
 	constructor(flipper) {
 		this.flipper = flipper;
+		this.flipperTrigger = this.flipper.querySelector('.flipper-trigger');
 	}
 	init() {
 		let flipper = this.flipper;
-		flipper.addEventListener('click', function() {
+		this.flipperTrigger.addEventListener('click', function() {
 			// This function is here so that the event listener can be removed once its purpose is served
 			function unflip(e) {
 				if (!flipper.contains(e.target) && flipper !== e.target) {

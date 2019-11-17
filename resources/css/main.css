@@ -168,6 +168,10 @@ ul.unformatted {
 	transform: rotateY(180deg);
 }
 
+.flipper .flipper-trigger {
+	cursor: pointer;
+}
+
 #home {
 	color: hsl(0, 100%, 100%);
 	height: 100vh;
@@ -323,7 +327,6 @@ ul.unformatted {
 	width: 28rem;
 	height: 28rem;
 	margin: 1.5em;
-	cursor: pointer;
 }
 
 .project.flipper .flipper-content {
@@ -357,7 +360,7 @@ ul.unformatted {
 	position: absolute;
 
 	transform: translateY(0);
-	transition: transform 500ms ease-in-out;
+	transition: transform 500ms ease-in-out 100ms;
 }
 
 .project:hover .project-cover,
@@ -375,7 +378,7 @@ ul.unformatted {
 	padding: 1.5em 2em;
 
 	transform: translateY(100%);
-	transition: transform 500ms ease-in-out;
+	transition: transform 500ms ease-in-out 100ms;
 }
 
 .project:hover .project-info,
@@ -397,8 +400,12 @@ ul.unformatted {
 }
 
 .project .project-more {
+	font-size: 1.1em;
 	display: inline-block;
 	margin: 2.5% 0 0;
+	color: hsl(210, 100%, 56%);
+	text-decoration: underline;
+	font-weight: bold;
 	animation: flick-right 750ms cubic-bezier(.55, .06, .68, .19) 250ms infinite alternate;
 }
 
@@ -419,6 +426,10 @@ ul.unformatted {
 
 .project .center-content {
 	width: 100%;
+}
+
+.project .project-technology {
+	text-align: left;
 }
 
 .project .built-with {

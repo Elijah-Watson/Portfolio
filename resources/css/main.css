@@ -321,6 +321,12 @@ ul.unformatted {
 	padding: 2rem 3rem;
 }
 
+.projects-wrapper {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
 .project {
 	font-size: 1.5rem;
 	position: relative;
@@ -353,7 +359,7 @@ ul.unformatted {
 }
 
 .project .scrim {
-	background-color: hsla(0, 0%, 20%, 0.9);
+	background-color: hsla(0, 0%, 20%, 0.925);
 }
 
 .project .project-cover {
@@ -440,6 +446,7 @@ ul.unformatted {
 .project .technology-list {
 	margin-left: 1.75em;
 	color: hsl(0, 100%, 100%);
+	column-count: 2;
 }
 
 .project .project-links {

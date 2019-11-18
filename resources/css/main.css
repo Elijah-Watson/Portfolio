@@ -110,30 +110,17 @@ ul.unformatted {
 	margin: 1em 0.5em;
 }
 
-.rounded-border-button.blue {
+.rounded-border-button.blue-white {
 	color: hsl(210, 100%, 56%);
 	background-color: hsl(0, 100%, 100%);
 	border-color: hsl(210, 100%, 56%);
 }
 
-.rounded-border-button.blue:hover,
-.rounded-border-button.blue:active {
+.rounded-border-button.blue-white:hover,
+.rounded-border-button.blue-white:active {
 	color: hsl(0, 100%, 100%);
 	background-color: hsl(210, 100%, 56%);
 	border-color: hsl(210, 100%, 56%);
-}
-
-.rounded-border-button.white {
-	color: hsl(0, 100%, 100%);
-	background-color: hsl(210, 100%, 56%);
-	border-color: hsl(0, 100%, 100%);
-}
-
-.rounded-border-button.white:hover,
-.rounded-border-button.white:active {
-	color: hsl(210, 100%, 56%);
-	background-color: hsl(0, 100%, 100%);
-	border-color: hsl(0, 100%, 100%);
 }
 
 .flipper {
@@ -470,4 +457,17 @@ ul.unformatted {
 
 .project .project-specs a {
 	color: hsl(210, 100%, 56%);
+}
+
+.footer {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: hsl(210, 100%, 56%);
+	color: hsl(0, 100%, 100%);
+}
+
+.footer .copyright {
+	font-size: 1.5rem;
+	margin: 1em;
 }

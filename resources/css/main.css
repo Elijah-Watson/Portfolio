@@ -216,6 +216,13 @@ ul.unformatted {
 	position: relative;
 }
 
+/* This selector target IE specifically to apply a backface-visibility fix */
+_:-ms-lang(x),
+.flipper.flipped .flipper-back,
+.flipper.flipped .flipper-front {
+	backface-visibility: visible;
+}
+
 .flipper .flipper-front,
 .flipper .flipper-back {
 	backface-visibility: hidden;
@@ -614,7 +621,7 @@ ul.unformatted {
 	justify-content: center;
 }
 
-.project .project-links-list-item+.project-links-list-item::before {
+.project .project-links-list-item + .project-links-list-item::before {
 	content: "|";
 	margin: 0 0.25em;
 	color: hsl(0, 100%, 100%);

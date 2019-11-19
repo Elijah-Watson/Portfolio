@@ -88,6 +88,70 @@ ul.unformatted {
 	list-style-type: none;
 }
 
+.hamburger {
+	background: none;
+	border: none;
+	cursor: pointer;
+	height: 2.55em;
+	width: 3em;
+}
+
+.hamburger .hamburger-inner {
+	display: block;
+	content: "";
+	background-color: currentColor;
+	width: 3em;
+	height: 0.3em;
+	border-radius: 0.2em;
+	
+	transition: transform 100ms linear;
+}
+
+.hamburger .hamburger-inner::before {
+	position: relative;
+	top: -0.7em;
+	display: block;
+	content: "";
+	background-color: currentColor;
+	width: 3em;
+	height: 0.3em;
+	border-radius: 0.2em;
+	
+	transition: transform 100ms linear, top 100ms linear 100ms;
+}
+
+.hamburger .hamburger-inner::after {
+	position: relative;
+	bottom: -0.4em;
+	display: block;
+	content: "";
+	background-color: currentColor;
+	width: 3em;
+	height: 0.3em;
+	border-radius: 0.2em;
+	
+	transition: bottom 100ms linear 100ms, opacity 100ms linear;
+}
+
+.hamburger.active .hamburger-inner {
+	transform: rotate(-45deg);
+	transition: transform 100ms linear 100ms;
+}
+
+.hamburger.active .hamburger-inner::before {
+	top: 0;
+	transform: rotate(90deg);
+	
+	transition: top 100ms linear, transform 100ms linear 100ms;
+}
+
+.hamburger.active .hamburger-inner::after {
+	bottom: 0.3em;
+	opacity: 0;
+	
+	transition: bottom 100ms linear, opacity 100ms linear 100ms;
+}
+
 .scrim {
 	position: absolute;
 	top: 0;
@@ -159,6 +223,71 @@ ul.unformatted {
 	cursor: pointer;
 }
 
+.header {
+	position: fixed;
+	display: flex;
+	align-items: center;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 5rem;
+	padding: 1em;
+	
+	background-color: transparent;
+	
+	z-index: 900;
+}
+
+.header .hamburger {
+	color: hsl(0, 100%, 100%);
+}
+
+.nav-widget {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: calc(100% - 5rem);
+	width: 25em;
+	max-width: 100%;
+	margin-top: 5rem;
+	background-color: hsla(0, 0%, 20%, 1);
+	border-radius: 0 0.5em 0 0;
+	
+	transform: translateX(-100%);
+	transition: transform 500ms ease-in-out;
+	
+	z-index: 800;
+}
+
+.nav-widget.active {
+	transform: translateX(0);
+}
+
+.nav-widget .nav-links {
+	font-size: 2em;
+	list-style-type: none;
+	height: 100%;
+	padding: 0.25em 0;
+	overflow-y: auto;
+}
+
+.nav-widget .nav-link {
+	display: block;
+	height: 100%;
+	width: 100%;
+	padding: 0 1em;
+	text-align: center;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	color: hsl(0, 100%, 100%);
+}
+
+.nav-widget .nav-link:hover,
+.nav-widget .nav-link:active {
+	color: hsl(210, 100%, 56%);
+}
+
 #home {
 	color: hsl(0, 100%, 100%);
 	height: 100vh;
@@ -185,59 +314,67 @@ ul.unformatted {
 	font-size: 1.5em;
 }
 
-#about {
-	padding: 2rem 3rem 12.5rem;
+#about-me {
+	padding: 2rem 3rem;
 }
 
-#about hr {
+#about-me hr {
 	border-color: hsl(210, 100%, 56%);
 	margin: 1em 0;
 }
 
-#about .center-content {
+#about-me .center-content {
 	max-width: 50em;
 }
 
-#about .headshot {
+#about-me .headshot {
 	width: 15em;
 	margin: 1em 0 0 0;
 }
 
-#about .social-media-icons {
+#about-me .social-media-icons {
 	margin: 1em 0;
 }
 
-#about .social-media-icons .icon {
+#about-me .social-media-icons .icon {
 	fill: hsl(0, 0%, 20%);
 	width: 3em;
 	height: 3em;
 	margin: 0 0.5em;
 }
 
-#about .bio {
+#about-me .bio {
 	font-size: 1.25em;
 	text-align: left;
 	margin: 1em 1.5em;
 }
 
 #skills {
-	background-color: hsl(210, 100%, 56%);
-	padding: 2rem 3rem;
+	position: relative;
+	color: hsl(0, 100%, 100%);
 }
 
 #skills h2 {
 	font-size: 2.75rem;
 }
 
+#skills .skills-backdrop {
+	position: absolute;
+	width: 100%;
+	height: calc(100% - 10rem);
+	margin-top: 10rem;
+	background-color: hsl(210, 100%, 56%);
+}
+
 .skill-box-container {
 	position: relative;
-	top: -10rem;
-	margin-bottom: -8rem;
 	width: 120rem;
+	margin: 2rem 3rem;
 
 	display: flex;
 	flex-wrap: wrap;
 
+	color: hsl(0, 0%, 20%);
 	box-shadow: 0 0 0 0.2em hsl(0, 0%, 20%);
 	border-radius: 0.75rem;
 }

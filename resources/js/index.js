@@ -4,6 +4,7 @@ import SVGInjector from 'svg-injector';
 import { touchDetect } from './utils/touch-detect';
 import { ImageCover } from './components/image-cover';
 import { ImageContain } from './components/image-contain';
+import { NavigationWidget } from './components/navigation-widget';
 import { Flipper } from './components/flipper';
 
 // Injects SVGs
@@ -24,7 +25,10 @@ function injectSVGs() {
 	let imageContainObjects = imageContainElements.map(imageContainElement => new ImageContain(imageContainElement));
 	imageContainObjects.forEach(imageContainObject => imageContainObject.init());
 
-
+	let hamburger = document.querySelector('.hamburger');
+	let navigationWidget = document.querySelector('.nav-widget');
+	let navigationWidgetObject = new NavigationWidget(hamburger, navigationWidget);
+	navigationWidgetObject.init();
 
 	let flippers = [...document.querySelectorAll('.flipper')];
 	let flipObjects = flippers.map(flipper => new Flipper(flipper));

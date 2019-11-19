@@ -12,6 +12,21 @@
 </head>
 
 <body>
+	<header class="header">
+		<button class="hamburger" aria-label="Menu" aria-controls="navigation">
+			<span class="hamburger-outer">
+				<span class="hamburger-inner"></span>
+			</span>
+		</button>
+	</header>
+	<nav class="nav-widget">
+		<ul class="nav-links">
+			<li class="nav-link-item"><a class="nav-link unformatted" href="#home">Home</a></li>
+			<li class="nav-link-item"><a class="nav-link unformatted" href="#about-me">About Me</a></li>
+			<li class="nav-link-item"><a class="nav-link unformatted" href="#skills">Skills</a></li>
+			<li class="nav-link-item"><a class="nav-link unformatted" href="#projects">Projects</a></li>
+		</ul>
+	</nav>
 	<section id="home">
 		<img class="home-background image-cover" src="${require('./resources/images/code-samples-blurred.png').src}"
 			srcset="${require('./resources/images/code-samples-blurred.png').srcSet}" alt="">
@@ -22,7 +37,7 @@
 			</div>
 		</div>
 	</section>
-	<section id="about">
+	<section id="about-me">
 		<div class="center-wrapper center-wrapper--horizontal">
 			<div class="center-content center-text">
 				<h2>About Me</h2>
@@ -52,6 +67,7 @@
 		</div>
 	</section>
 	<section id="skills">
+		<div class="skills-backdrop"></div>
 		<div class="center-wrapper center-wrapper--horizontal">
 			<div class="center-content skill-box-container">
 				<div class="skills-box skills-box-left">

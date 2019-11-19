@@ -1,19 +1,10 @@
 // Controls the opening and closing of the navigation widget
 export class NavigationWidget {
-	constructor(button, widget) {
+	constructor(button, widget, content) {
 		this.button = button;
 		this.widget = widget;
+		this.content = content;
 		this.sections = document.querySelectorAll('section');
-	}
-
-	setToSectionColor() {
-		let currentSection;
-		let currentColor;
-		this.sections.forEach(section => {
-			if (section.getBoundingClientRect().top <= 0) currentSection = section;
-		});
-		currentColor = window.getComputedStyle(currentSection).getPropertyValue('color');
-		this.button.style.color = currentColor;
 	}
 
 	toggleButton() {
@@ -24,17 +15,17 @@ export class NavigationWidget {
 		this.widget.classList.toggle('active');
 	}
 
+	toggleContent() {
+		this.content.classList.toggle('nav-widget-open');
+	}
+
 	toggle() {
 		this.toggleButton();
 		this.toggleWidget();
+		this.toggleContent();
 	}
 
 	init() {
-		this.setToSectionColor();
 		this.button.addEventListener('click', () => this.toggle());
-		this.widget.addEventListener('click', e => {
-			if (e.target.tagName.toLowerCase() === 'a') this.toggle();
-		});
-		document.addEventListener('scroll', () => this.setToSectionColor());
 	}
 }

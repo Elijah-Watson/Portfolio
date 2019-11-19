@@ -9,7 +9,7 @@ import { Flipper } from './components/flipper';
 
 // Injects SVGs
 function injectSVGs() {
-	var mySVGsToInject = document.querySelectorAll('img.icon');
+	var mySVGsToInject = document.querySelectorAll('.icon');
 	SVGInjector(mySVGsToInject);
 }
 
@@ -27,7 +27,8 @@ function injectSVGs() {
 
 	let hamburger = document.querySelector('.hamburger');
 	let navigationWidget = document.querySelector('.nav-widget');
-	let navigationWidgetObject = new NavigationWidget(hamburger, navigationWidget);
+	let mainContent = document.querySelector('.main-content');
+	let navigationWidgetObject = new NavigationWidget(hamburger, navigationWidget, mainContent);
 	navigationWidgetObject.init();
 
 	let flippers = [...document.querySelectorAll('.flipper')];

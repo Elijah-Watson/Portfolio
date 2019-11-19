@@ -17,6 +17,22 @@ module.exports = {
 				test: /\.(jpe?g|png|gif|svg)$/i,
 				include: [
 					path.resolve(__dirname, 'resources/css/images'),
+					path.resolve(__dirname, 'resources/open-iconic'),
+				],
+				use: [
+					{
+						loader: 'file-loader',
+						options: {
+							outputPath: 'images',
+							name: '[name].[hash].[ext]',
+						}
+					}
+				]
+			},
+			{
+				test: /\.(jpe?g|png|gif|svg)$/i,
+				include: [
+					path.resolve(__dirname, 'resources/css/images'),
 					path.resolve(__dirname, 'resources/icons'),
 				],
 				use: [

@@ -12,367 +12,440 @@
 </head>
 
 <body>
-	<header class="header">
+	<!-- Used for SVG injection -->
+	<img src="./resources/open-iconic/sprite/open-iconic.min.svg" class="iconic-sprite icon" style="display:none;"
+		alt="" />
+	<nav class="nav-widget">
 		<button class="hamburger" aria-label="Menu" aria-controls="navigation">
 			<span class="hamburger-outer">
 				<span class="hamburger-inner"></span>
 			</span>
 		</button>
-	</header>
-	<nav class="nav-widget">
 		<ul class="nav-links">
-			<li class="nav-link-item"><a class="nav-link unformatted" href="#home">Home</a></li>
-			<li class="nav-link-item"><a class="nav-link unformatted" href="#about-me">About Me</a></li>
-			<li class="nav-link-item"><a class="nav-link unformatted" href="#skills">Skills</a></li>
-			<li class="nav-link-item"><a class="nav-link unformatted" href="#projects">Projects</a></li>
+			<li class="nav-link-item">
+				<a class="nav-link unformatted" href="#home-screen">
+					<span class="nav-link-text">Home</span>
+					<svg class="nav-link-icon icon" viewBox="0 0 8 8">
+						<use xlink:href="#home" class="icon-home"></use>
+					</svg>
+				</a>
+			</li>
+			<li class="nav-link-item">
+				<a class="nav-link unformatted" href="#about-me">
+					<span class="nav-link-text">About Me</span>
+					<svg class="nav-link-icon icon" viewBox="0 0 8 8">
+						<use xlink:href="#person" class="icon-person"></use>
+					</svg>
+				</a>
+			</li>
+			<li class="nav-link-item">
+				<a class="nav-link unformatted" href="#skills">
+					<span class="nav-link-text">Skills</span>
+					<svg class="nav-link-icon icon" viewBox="0 0 8 8">
+						<use xlink:href="#cog" class="icon-cog"></use>
+					</svg>
+				</a>
+			</li>
+			<li class="nav-link-item">
+				<a class="nav-link unformatted" href="#projects">
+					<span class="nav-link-text">Projects</span>
+					<svg class="nav-link-icon icon" viewBox="0 0 7 8">
+						<use xlink:href="#tablet" class="icon-tablet"></use>
+					</svg>
+				</a>
+			</li>
 		</ul>
 	</nav>
-	<section id="home">
-		<img class="home-background image-cover" src="${require('./resources/images/code-samples-blurred.png').src}"
-			srcset="${require('./resources/images/code-samples-blurred.png').srcSet}" alt="">
-		<div class="scrim center-wrapper center-wrapper--both">
-			<div class="center-content site-title">
-				<h1 class="name">Elijah Watson</h1>
-				<span class="title">Web Developer</span>
-			</div>
-		</div>
-	</section>
-	<section id="about-me">
-		<div class="center-wrapper center-wrapper--horizontal">
-			<div class="center-content center-text">
-				<h2>About Me</h2>
-				<img class="headshot" src="${require('./resources/images/elijah-watson-headshot.png').src}"
-					srcset="${require('./resources/images/elijah-watson-headshot.png').srcSet}"
-					alt="Elijah Watson Headshot">
-				<div class="social-media-icons">
-					<a href="https://github.com/Elijah-Watson" target="_blank" rel="noopener noreferrer"
-						class="unformatted">
-						<img src="./resources/icons/github-icon.svg" class="icon" alt="GitHub icon" />
-					</a>
-					<a href="https://www.linkedin.com/in/Elijah-Watson" target="_blank" rel="noopener noreferrer"
-						class="unformatted">
-						<img src="./resources/icons/linkedin-icon.svg" class="icon" alt="LinkedIn icon" />
-					</a>
-				</div>
-				<hr />
-				<p class="bio">Junior web developer dedicated to creating and optimizing the performance of efficient,
-					user-friendly
-					websites. Looking
-					to apply creativity, technical skills, and critical thinking to all aspects of the development
-					process.</p>
-				<hr />
-				<a class="rounded-border-button blue-white unformatted" href="resources/documents/Elijah Watson Resume.pdf"
-					download>Download Resume</a>
-			</div>
-		</div>
-	</section>
-	<section id="skills">
-		<div class="skills-backdrop"></div>
-		<div class="center-wrapper center-wrapper--horizontal">
-			<div class="center-content skill-box-container">
-				<div class="skills-box skills-box-left">
-					<h2>General Skills</h2>
-					<div class="skill">
-						<h3 class="skill-title">Fast Learning</h3>
-						<p class="skill-description">I always appreciate learning new things. Throughout my educational
-							and professional career,
-							my ability to learn quickly and independently has been one of my strongest skills. I apply
-							this skill to the development process often, and I always enjoy learning new langauges,
-							technologies, and other development skills.</p>
-					</div>
-					<div class="skill">
-						<h3 class="skill-title">Critical Thinking</h3>
-						<p class="skill-description">As someone who has always enjoyed math and science, critical
-							thinking is second nature to me.
-							When faced with any project or decision, I am able to quickly and thoroughly consider
-							relevant information and then make an informed decision.</p>
-					</div>
-					<div class="skill">
-						<h3 class="skill-title">Problem Solving</h3>
-						<p class="skill-description">One thing that has always drawn me to programming and web
-							development is the problem solving
-							aspect. Each new problem is like a puzzle that I enjoy solving. I take pride in being able
-							to solve those problems quickly and creatively.</p>
-					</div>
-					<div class="skill">
-						<h3 class="skill-title">Time Management</h3>
-						<p class="skill-description">As any developer knows, managing time effectively is an absolutely
-							critical skill. Being able
-							to switch between different aspects of the development process and manage deadlines in a way
-							that ensures projects are completed on time is something I have always taken very seriously.
-						</p>
-					</div>
-					<div class="skill">
-						<h3 class="skill-title">Communication</h3>
-						<p class="skill-description">The ability to communicate complex, technical concepts into simple
-							langauge has been an
-							invaluable skill throughout my career and in life. In any setting, I always make an effort
-							to communicate early and often.</p>
-					</div>
-				</div>
-				<div class="skills-box skills-box-right">
-					<h2>Development Skills</h2>
-					<div class="skill">
-						<h3 class="skill-title">Web Development</h3>
-						<p class="skill-description">I have a passion for making beautiful, efficient websites. I have a
-							thorough understanding of
-							the web development process, and I keep learning more every day.</p>
-					</div>
-					<div class="skill">
-						<h3 class="skill-title">Responsive Design</h3>
-						<p class="skill-description">The internet is always evolving, and web development has to evolve
-							with it. In every project,
-							ensuring it is fully functional on any device is a top priority of mine.</p>
-					</div>
-					<div class="skill">
-						<h3 class="skill-title">Cross-browser Compatibility</h3>
-						<p class="skill-description">Not everyone uses the same browser. As a web developer, it is my
-							responsiblity to make sure
-							all popular browsers are able accounted for in any project, and I take that responsibility
-							seriously.</p>
-					</div>
-					<div class="skill">
-						<h3 class="skill-title">SEO</h3>
-						<p class="skill-description">What good is a website if no one can find it? I make an effort to
-							ensure every website and
-							every page I design is built in a way that maximizes SEO potential.</p>
-					</div>
-					<div class="skill">
-						<h3 class="skill-title">Accessibility</h3>
-						<p class="skill-description">It is my firm belief that everyone should have the ability to
-							access websites despite their
-							disabilities. Therefore, I always strive to ensure every part of any website I create is
-							accessible.</p>
-					</div>
-					<div class="skill">
-						<h3 class="skill-title">Website Security</h3>
-						<p class="skill-description">Nobody likes being hacked. When creating websites, I always give
-							special consideration to
-							security to ensure that both the website and its users are protected from attacks.</p>
-					</div>
-					<div class="skill">
-						<h3 class="skill-title">UX & UI Design</h3>
-						<p class="skill-description">When it comes to web development, end users are the final judges.
-							Creating a beautiful and
-							functional user experience is a part of the development process I take very seriously.</p>
-					</div>
-					<div class="skill">
-						<h3 class="skill-title">Troubleshooting & Debugging</h3>
-						<p class="skill-description">Things never go perfectly; errors and bugs tend to pop up from time
-							to time. Fortunately, I
-							have extensive experience with finding and fixing issues quickly and effectively.</p>
-					</div>
-					<div class="skill">
-						<h3 class="skill-title">Hosting & Maintenance</h3>
-						<p class="skill-description">There's more to creating a website than just writing code. Getting
-							it on the internet and
-							keeping it there is no small feat. Through experience, I have learned the skills needed to
-							do so effectively.</p>
-					</div>
-				</div>
-				<div class="skills-box skills-box-bottom">
-					<h2>Languages, Tools, and Technologies</h2>
-					<div class="logo-boxes">
-						<div class="logo-box">
-							<img class="logo-box-image" src="${require('./resources/images/logos/html5-logo.png').src}"
-								srcset="${require('./resources/images/logos/html5-logo.png').srcSet}" alt="HTML5 Logo">
-						</div>
-						<div class="logo-box">
-							<img class="logo-box-image" src="${require('./resources/images/logos/css3-logo.png').src}"
-								srcset="${require('./resources/images/logos/css3-logo.png').srcSet}" alt="HTML5 Logo">
-						</div>
-						<div class="logo-box">
-							<img class="logo-box-image"
-								src="${require('./resources/images/logos/javascript-logo.png').src}"
-								srcset="${require('./resources/images/logos/javascript-logo.png').srcSet}"
-								alt="HTML5 Logo">
-						</div>
-						<div class="logo-box">
-							<img class="logo-box-image" src="${require('./resources/images/logos/php-logo.png').src}"
-								srcset="${require('./resources/images/logos/php-logo.png').srcSet}" alt="HTML5 Logo">
-						</div>
-						<div class="logo-box">
-							<img class="logo-box-image" src="${require('./resources/images/logos/sql-logo.png').src}"
-								srcset="${require('./resources/images/logos/sql-logo.png').srcSet}" alt="HTML5 Logo">
-						</div>
-						<div class="logo-box">
-							<img class="logo-box-image"
-								src="${require('./resources/images/logos/wordpress-logo.png').src}"
-								srcset="${require('./resources/images/logos/wordpress-logo.png').srcSet}"
-								alt="HTML5 Logo">
-						</div>
-						<div class="logo-box center-wrapper center-wrapper--both">
-							<span class="logo-box-text center-text">APIs / REST APIs</span>
-						</div>
-						<div class="logo-box center-wrapper center-wrapper--both">
-							<span class="logo-box-text center-text">AJAX</span>
-						</div>
-						<div class="logo-box">
-							<img class="logo-box-image" src="${require('./resources/images/logos/jquery-logo.png').src}"
-								srcset="${require('./resources/images/logos/jquery-logo.png').srcSet}" alt="HTML5 Logo">
-						</div>
-						<div class="logo-box">
-							<img class="logo-box-image" src="${require('./resources/images/logos/github-logo.png').src}"
-								srcset="${require('./resources/images/logos/github-logo.png').srcSet}" alt="HTML5 Logo">
-						</div>
-						<div class="logo-box">
-							<img class="logo-box-image"
-								src="${require('./resources/images/logos/node-js-logo.png').src}"
-								srcset="${require('./resources/images/logos/node-js-logo.png').srcSet}"
-								alt="HTML5 Logo">
-						</div>
-						<div class="logo-box">
-							<img class="logo-box-image"
-								src="${require('./resources/images/logos/dark-webpack-logo.png').src}"
-								srcset="${require('./resources/images/logos/dark-webpack-logo.png').srcSet}"
-								alt="HTML5 Logo">
-						</div>
-						<div class="logo-box center-wrapper center-wrapper--both">
-							<span class="logo-box-text center-text">SCORM Courseware</span>
-						</div>
-						<div class="logo-box center-wrapper center-wrapper--both">
-							<span class="logo-box-text center-text">Email Marketing</span>
-						</div>
-						<div class="logo-box center-wrapper center-wrapper--both">
-							<span class="logo-box-text center-text">Web Analytics</span>
-						</div>
-						<div class="logo-box">
-							<img class="logo-box-image"
-								src="${require('./resources/images/logos/microsoft-office-logo.png').src}"
-								srcset="${require('./resources/images/logos/microsoft-office-logo.png').srcSet}"
-								alt="HTML5 Logo">
-						</div>
-					</div>
+	<div class="main-content nav-widget-closed">
+		<section id="home-screen">
+			<img class="home-background image-cover" src="${require('./resources/images/code-samples-blurred.png').src}"
+				srcset="${require('./resources/images/code-samples-blurred.png').srcSet}" alt="">
+			<div class="scrim center-wrapper center-wrapper--both">
+				<div class="center-content site-title">
+					<h1 class="name">Elijah Watson</h1>
+					<span class="title">Web Developer</span>
 				</div>
 			</div>
-		</div>
-	</section>
-	<section id="projects">
-		<div class="center-wrapper center-wrapper--horizontal"></div>
-			<div class="center-content center-text">
-				<h2>Projects</h2>
-				<div class="projects-wrapper">
-					<div class="project flipper">
-						<div class="flipper-content">
-							<div class="flipper-front">
-								<img class="project-background image-cover"
-									src="${require('./resources/images/move-out-background.png').src}"
-									srcset="${require('./resources/images/move-out-background.png').srcSet}" alt="">
-								<div class="scrim">
-									<div class="project-cover center-wrapper center-wrapper--both">
-										<div class="center-content project-logo-container">
-											<img class="project-logo image-contain"
-												src="${require('./resources/images/move-out-logo-theme-color.png').src}"
-												srcset="${require('./resources/images/move-out-logo-theme-color.png').srcSet}"
-												alt="">
-										</div>
-									</div>
-									<div class="project-info center-wrapper center-wrapper--horizontal">
-										<div class="center-content center-text">
-											<h3 class="project-name"><span class="project-name-underline">Move Out</span>
-											</h3>
-											<p class="project-description">A collection of helpful resources to make sure
-												you are prepared to succeed when planning to move out. It includes a
-												moving expenses and budgeting calculator as well as useful guides on a
-												variety of topics.</p>
-											<button class="project-more unformatted flipper-trigger">More Info ></button>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="flipper-back">
-								<div class="project-specs center-wrapper center-wrapper--horizontal">
-									<div class="center-content">
-										<div class="project-technology">
-											<div class="built-with">Built With:</div>
-											<ul class="technology-list">
-												<li>HTML</li>
-												<li>CSS</li>
-												<li>JavaScript</li>
-												<li>APIs</li>
-												<li>Git/GitHub</li>
-												<li>Node.js/npm</li>
-												<li>Webpack</li>
-											</ul>
-										</div>
-										<div class="project-links">
-											<ul class="project-links-list unformatted">
-												<li class="project-links-list-item"><a
-														href="https://github.com/Elijah-Watson/Move-Out" target="_blank"
-														rel="noopener noreferrer">GitHub Repo</a></li>
-												<li class="project-links-list-item"><a href="https://move-out.netlify.com"
-														target="_blank" rel="noopener noreferrer">Website</a></li>
-											</ul>
-										</div>
-									</div>
-								</div>
-							</div>
+		</section>
+		<section id="about-me">
+			<div class="center-wrapper center-wrapper--horizontal">
+				<div class="center-content center-text">
+					<h2>About Me</h2>
+					<img class="headshot" src="${require('./resources/images/elijah-watson-headshot.png').src}"
+						srcset="${require('./resources/images/elijah-watson-headshot.png').srcSet}"
+						alt="Elijah Watson Headshot">
+					<div class="social-media-icons">
+						<a href="https://github.com/Elijah-Watson" target="_blank" rel="noopener noreferrer"
+							class="unformatted">
+							<img src="./resources/icons/github-icon.svg" class="icon" alt="GitHub icon" />
+						</a>
+						<a href="https://www.linkedin.com/in/Elijah-Watson" target="_blank" rel="noopener noreferrer"
+							class="unformatted">
+							<img src="./resources/icons/linkedin-icon.svg" class="icon" alt="LinkedIn icon" />
+						</a>
+					</div>
+					<hr />
+					<p class="bio">Junior web developer dedicated to creating and optimizing the performance of
+						efficient,
+						user-friendly
+						websites. Looking
+						to apply creativity, technical skills, and critical thinking to all aspects of the development
+						process.</p>
+					<hr />
+					<a class="rounded-border-button blue-white unformatted"
+						href="resources/documents/Elijah Watson Resume.pdf" download>Download Resume</a>
+				</div>
+			</div>
+		</section>
+		<section id="skills">
+			<div class="skills-backdrop"></div>
+			<div class="center-wrapper center-wrapper--horizontal">
+				<div class="center-content skill-box-container">
+					<div class="skills-box skills-box-left">
+						<h2>General Skills</h2>
+						<div class="skill">
+							<h3 class="skill-title">Fast Learning</h3>
+							<p class="skill-description">I always appreciate learning new things. Throughout my
+								educational
+								and professional career,
+								my ability to learn quickly and independently has been one of my strongest skills. I
+								apply
+								this skill to the development process often, and I always enjoy learning new langauges,
+								technologies, and other development skills.</p>
+						</div>
+						<div class="skill">
+							<h3 class="skill-title">Critical Thinking</h3>
+							<p class="skill-description">As someone who has always enjoyed math and science, critical
+								thinking is second nature to me.
+								When faced with any project or decision, I am able to quickly and thoroughly consider
+								relevant information and then make an informed decision.</p>
+						</div>
+						<div class="skill">
+							<h3 class="skill-title">Problem Solving</h3>
+							<p class="skill-description">One thing that has always drawn me to programming and web
+								development is the problem solving
+								aspect. Each new problem is like a puzzle that I enjoy solving. I take pride in being
+								able
+								to solve those problems quickly and creatively.</p>
+						</div>
+						<div class="skill">
+							<h3 class="skill-title">Time Management</h3>
+							<p class="skill-description">As any developer knows, managing time effectively is an
+								absolutely
+								critical skill. Being able
+								to switch between different aspects of the development process and manage deadlines in a
+								way
+								that ensures projects are completed on time is something I have always taken very
+								seriously.
+							</p>
+						</div>
+						<div class="skill">
+							<h3 class="skill-title">Communication</h3>
+							<p class="skill-description">The ability to communicate complex, technical concepts into
+								simple
+								langauge has been an
+								invaluable skill throughout my career and in life. In any setting, I always make an
+								effort
+								to communicate early and often.</p>
 						</div>
 					</div>
-					<div class="project flipper">
-						<div class="flipper-content">
-							<div class="flipper-front">
-								<img class="project-background image-cover"
-									src="${require('./resources/images/realcam-3-web-interface-background.png').src}"
-									srcset="${require('./resources/images/realcam-3-web-interface-background.png').srcSet}"
-									alt="">
-								<div class="scrim">
-									<div class="project-cover center-wrapper center-wrapper--both">
-										<div class="center-content project-logo-container">
-											<img class="project-logo image-contain"
-												src="${require('./resources/images/reahard-logo-theme-color.png').src}"
-												srcset="${require('./resources/images/reahard-logo-theme-color.png').srcSet}"
-												alt="">
-										</div>
-									</div>
-									<div class="project-info center-wrapper center-wrapper--horizontal">
-										<div class="center-content center-text">
-											<h3 class="project-name"><span class="project-name-underline">RealCam 3.0</span>
-											</h3>
-											<p class="project-description">A web interface for sorting, filtering, and
-												searching through video records based on access level as well as viewing,
-												downloading, or vaulting them. Fully responsive and cross-browser
-												compatible.</p>
-											<button class="project-more unformatted flipper-trigger">More Info ></button>
-										</div>
-									</div>
-								</div>
+					<div class="skills-box skills-box-right">
+						<h2>Development Skills</h2>
+						<div class="skill">
+							<h3 class="skill-title">Web Development</h3>
+							<p class="skill-description">I have a passion for making beautiful, efficient websites. I
+								have a
+								thorough understanding of
+								the web development process, and I keep learning more every day.</p>
+						</div>
+						<div class="skill">
+							<h3 class="skill-title">Responsive Design</h3>
+							<p class="skill-description">The internet is always evolving, and web development has to
+								evolve
+								with it. In every project,
+								ensuring it is fully functional on any device is a top priority of mine.</p>
+						</div>
+						<div class="skill">
+							<h3 class="skill-title">Cross-browser Compatibility</h3>
+							<p class="skill-description">Not everyone uses the same browser. As a web developer, it is
+								my
+								responsiblity to make sure
+								all popular browsers are able accounted for in any project, and I take that
+								responsibility
+								seriously.</p>
+						</div>
+						<div class="skill">
+							<h3 class="skill-title">SEO</h3>
+							<p class="skill-description">What good is a website if no one can find it? I make an effort
+								to
+								ensure every website and
+								every page I design is built in a way that maximizes SEO potential.</p>
+						</div>
+						<div class="skill">
+							<h3 class="skill-title">Accessibility</h3>
+							<p class="skill-description">It is my firm belief that everyone should have the ability to
+								access websites despite their
+								disabilities. Therefore, I always strive to ensure every part of any website I create is
+								accessible.</p>
+						</div>
+						<div class="skill">
+							<h3 class="skill-title">Website Security</h3>
+							<p class="skill-description">Nobody likes being hacked. When creating websites, I always
+								give
+								special consideration to
+								security to ensure that both the website and its users are protected from attacks.</p>
+						</div>
+						<div class="skill">
+							<h3 class="skill-title">UX & UI Design</h3>
+							<p class="skill-description">When it comes to web development, end users are the final
+								judges.
+								Creating a beautiful and
+								functional user experience is a part of the development process I take very seriously.
+							</p>
+						</div>
+						<div class="skill">
+							<h3 class="skill-title">Troubleshooting & Debugging</h3>
+							<p class="skill-description">Things never go perfectly; errors and bugs tend to pop up from
+								time
+								to time. Fortunately, I
+								have extensive experience with finding and fixing issues quickly and effectively.</p>
+						</div>
+						<div class="skill">
+							<h3 class="skill-title">Hosting & Maintenance</h3>
+							<p class="skill-description">There's more to creating a website than just writing code.
+								Getting
+								it on the internet and
+								keeping it there is no small feat. Through experience, I have learned the skills needed
+								to
+								do so effectively.</p>
+						</div>
+					</div>
+					<div class="skills-box skills-box-bottom">
+						<h2>Languages, Tools, and Technologies</h2>
+						<div class="logo-boxes">
+							<div class="logo-box">
+								<img class="logo-box-image"
+									src="${require('./resources/images/logos/html5-logo.png').src}"
+									srcset="${require('./resources/images/logos/html5-logo.png').srcSet}"
+									alt="HTML5 Logo">
 							</div>
-							<div class="flipper-back">
-								<div class="project-specs center-wrapper center-wrapper--horizontal">
-									<div class="center-content">
-										<div class="project-technology">
-											<div class="built-with">Built With:</div>
-											<ul class="technology-list">
-												<li>HTML</li>
-												<li>CSS</li>
-												<li>JavaScript</li>
-												<li>PHP</li>
-												<li>SQL</li>
-												<li>WordPress</li>
-												<li>APIs</li>
-												<li>AJAX</li>
-												<li>Git/GitHub</li>
-											</ul>
-										</div>
-										<div class="project-links">
-											<ul class="project-links-list unformatted">
-												<li class="project-links-list-item"><a href="#" target="_blank"
-														rel="noopener noreferrer">Demo Videos</a></li>
-											</ul>
-										</div>
-									</div>
-								</div>
+							<div class="logo-box">
+								<img class="logo-box-image"
+									src="${require('./resources/images/logos/css3-logo.png').src}"
+									srcset="${require('./resources/images/logos/css3-logo.png').srcSet}"
+									alt="HTML5 Logo">
+							</div>
+							<div class="logo-box">
+								<img class="logo-box-image"
+									src="${require('./resources/images/logos/javascript-logo.png').src}"
+									srcset="${require('./resources/images/logos/javascript-logo.png').srcSet}"
+									alt="HTML5 Logo">
+							</div>
+							<div class="logo-box">
+								<img class="logo-box-image"
+									src="${require('./resources/images/logos/php-logo.png').src}"
+									srcset="${require('./resources/images/logos/php-logo.png').srcSet}"
+									alt="HTML5 Logo">
+							</div>
+							<div class="logo-box">
+								<img class="logo-box-image"
+									src="${require('./resources/images/logos/sql-logo.png').src}"
+									srcset="${require('./resources/images/logos/sql-logo.png').srcSet}"
+									alt="HTML5 Logo">
+							</div>
+							<div class="logo-box">
+								<img class="logo-box-image"
+									src="${require('./resources/images/logos/wordpress-logo.png').src}"
+									srcset="${require('./resources/images/logos/wordpress-logo.png').srcSet}"
+									alt="HTML5 Logo">
+							</div>
+							<div class="logo-box center-wrapper center-wrapper--both">
+								<span class="logo-box-text center-text">APIs / REST APIs</span>
+							</div>
+							<div class="logo-box center-wrapper center-wrapper--both">
+								<span class="logo-box-text center-text">AJAX</span>
+							</div>
+							<div class="logo-box">
+								<img class="logo-box-image"
+									src="${require('./resources/images/logos/jquery-logo.png').src}"
+									srcset="${require('./resources/images/logos/jquery-logo.png').srcSet}"
+									alt="HTML5 Logo">
+							</div>
+							<div class="logo-box">
+								<img class="logo-box-image"
+									src="${require('./resources/images/logos/github-logo.png').src}"
+									srcset="${require('./resources/images/logos/github-logo.png').srcSet}"
+									alt="HTML5 Logo">
+							</div>
+							<div class="logo-box">
+								<img class="logo-box-image"
+									src="${require('./resources/images/logos/node-js-logo.png').src}"
+									srcset="${require('./resources/images/logos/node-js-logo.png').srcSet}"
+									alt="HTML5 Logo">
+							</div>
+							<div class="logo-box">
+								<img class="logo-box-image"
+									src="${require('./resources/images/logos/dark-webpack-logo.png').src}"
+									srcset="${require('./resources/images/logos/dark-webpack-logo.png').srcSet}"
+									alt="HTML5 Logo">
+							</div>
+							<div class="logo-box center-wrapper center-wrapper--both">
+								<span class="logo-box-text center-text">SCORM Courseware</span>
+							</div>
+							<div class="logo-box center-wrapper center-wrapper--both">
+								<span class="logo-box-text center-text">Email Marketing</span>
+							</div>
+							<div class="logo-box center-wrapper center-wrapper--both">
+								<span class="logo-box-text center-text">Web Analytics</span>
+							</div>
+							<div class="logo-box">
+								<img class="logo-box-image"
+									src="${require('./resources/images/logos/microsoft-office-logo.png').src}"
+									srcset="${require('./resources/images/logos/microsoft-office-logo.png').srcSet}"
+									alt="HTML5 Logo">
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-	</section>
-	<footer class="footer center-text">
-		<div class="copyright">Built by me &#169; 2019</div>
-	</footer>
+		</section>
+		<section id="projects">
+			<div class="center-wrapper center-wrapper--horizontal">
+				<div class="center-content center-text">
+					<h2>Projects</h2>
+					<div class="projects-wrapper">
+						<div class="project flipper">
+							<div class="flipper-content">
+								<div class="flipper-front">
+									<img class="project-background image-cover"
+										src="${require('./resources/images/move-out-background.png').src}"
+										srcset="${require('./resources/images/move-out-background.png').srcSet}" alt="">
+									<div class="scrim">
+										<div class="project-cover center-wrapper center-wrapper--both">
+											<div class="center-content project-logo-container">
+												<img class="project-logo image-contain"
+													src="${require('./resources/images/move-out-logo-theme-color.png').src}"
+													srcset="${require('./resources/images/move-out-logo-theme-color.png').srcSet}"
+													alt="">
+											</div>
+										</div>
+										<div class="project-info center-wrapper center-wrapper--horizontal">
+											<div class="center-content center-text">
+												<h3 class="project-name"><span class="project-name-underline">Move
+														Out</span>
+												</h3>
+												<p class="project-description">A collection of helpful resources to make
+													sure
+													you are prepared to succeed when planning to move out. It includes a
+													moving expenses and budgeting calculator as well as useful guides on
+													a
+													variety of topics.</p>
+												<button class="project-more unformatted flipper-trigger">More Info
+													></button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="flipper-back">
+									<div class="project-specs center-wrapper center-wrapper--horizontal">
+										<div class="center-content">
+											<div class="project-technology">
+												<div class="built-with">Built With:</div>
+												<ul class="technology-list">
+													<li>HTML</li>
+													<li>CSS</li>
+													<li>JavaScript</li>
+													<li>APIs</li>
+													<li>Git/GitHub</li>
+													<li>Node.js/npm</li>
+													<li>Webpack</li>
+												</ul>
+											</div>
+											<div class="project-links">
+												<ul class="project-links-list unformatted">
+													<li class="project-links-list-item"><a
+															href="https://github.com/Elijah-Watson/Move-Out"
+															target="_blank" rel="noopener noreferrer">GitHub Repo</a>
+													</li>
+													<li class="project-links-list-item"><a
+															href="https://move-out.netlify.com" target="_blank"
+															rel="noopener noreferrer">Website</a></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="project flipper">
+							<div class="flipper-content">
+								<div class="flipper-front">
+									<img class="project-background image-cover"
+										src="${require('./resources/images/realcam-3-web-interface-background.png').src}"
+										srcset="${require('./resources/images/realcam-3-web-interface-background.png').srcSet}"
+										alt="">
+									<div class="scrim">
+										<div class="project-cover center-wrapper center-wrapper--both">
+											<div class="center-content project-logo-container">
+												<img class="project-logo image-contain"
+													src="${require('./resources/images/reahard-logo-theme-color.png').src}"
+													srcset="${require('./resources/images/reahard-logo-theme-color.png').srcSet}"
+													alt="">
+											</div>
+										</div>
+										<div class="project-info center-wrapper center-wrapper--horizontal">
+											<div class="center-content center-text">
+												<h3 class="project-name"><span class="project-name-underline">RealCam
+														3.0</span>
+												</h3>
+												<p class="project-description">A web interface for sorting, filtering,
+													and
+													searching through video records based on access level as well as
+													viewing,
+													downloading, or vaulting them. Fully responsive and cross-browser
+													compatible.</p>
+												<button class="project-more unformatted flipper-trigger">More Info
+													></button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="flipper-back">
+									<div class="project-specs center-wrapper center-wrapper--horizontal">
+										<div class="center-content">
+											<div class="project-technology">
+												<div class="built-with">Built With:</div>
+												<ul class="technology-list">
+													<li>HTML</li>
+													<li>CSS</li>
+													<li>JavaScript</li>
+													<li>PHP</li>
+													<li>SQL</li>
+													<li>WordPress</li>
+													<li>APIs</li>
+													<li>AJAX</li>
+													<li>Git/GitHub</li>
+												</ul>
+											</div>
+											<div class="project-links">
+												<ul class="project-links-list unformatted">
+													<li class="project-links-list-item"><a href="#" target="_blank"
+															rel="noopener noreferrer">Demo Videos</a></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<footer class="footer center-text">
+			<div class="copyright">Built by me &#169; 2019</div>
+		</footer>
+	</div>
 </body>
 
 </html>

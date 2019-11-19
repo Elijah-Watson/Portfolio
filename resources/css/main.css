@@ -77,10 +77,10 @@ a.unformatted {
 }
 
 button.unformatted {
-	background-color: unset;
-	color: unset;
-	border: unset;
-	line-height: unset;
+	background-color: transparent;
+	color: black;
+	border: none;
+	line-height: normal;
 	text-align: left;
 }
 
@@ -233,7 +233,8 @@ ul.unformatted {
 	position: relative;
 	top: -10rem;
 	margin-bottom: -8rem;
-	width: 120rem;
+	width: 100%;
+	max-width: 120rem;
 
 	display: flex;
 	flex-wrap: wrap;
@@ -243,7 +244,7 @@ ul.unformatted {
 }
 
 .skills-box {
-	flex: 1 1 0;
+	flex: 1 1 0px;
 	box-shadow: 0 0 0 0.2em hsl(0, 0%, 20%);
 	background-color: hsl(0, 100%, 100%);
 	padding: 1em;
@@ -258,7 +259,7 @@ ul.unformatted {
 }
 
 .skills-box-bottom {
-	flex: 0 0 100%;
+	flex: 1 1 100%;
 	width: 100%;
 	border-radius: 0 0 0.75rem 0.75rem;
 }

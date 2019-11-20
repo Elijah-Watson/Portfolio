@@ -50,17 +50,8 @@ body {
 }
 
 .main-content {
-	transition: transform 500ms ease-in-out, width 500ms ease-in-out;
-}
-
-.main-content.nav-widget-closed {
 	transform: translateX(7rem);
 	width: calc(100% - 7rem);
-}
-
-.main-content.nav-widget-open {
-	transform: translateX(25rem);
-	width: calc(100% - 25rem);
 }
 
 .center-wrapper {

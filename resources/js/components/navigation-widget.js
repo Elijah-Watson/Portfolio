@@ -15,14 +15,9 @@ export class NavigationWidget {
 		this.widget.classList.toggle('active');
 	}
 
-	toggleContent() {
-		this.content.classList.toggle('nav-widget-open');
-	}
-
 	toggle() {
 		this.toggleButton();
 		this.toggleWidget();
-		this.toggleContent();
 	}
 
 	init() {

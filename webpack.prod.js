@@ -31,7 +31,17 @@ module.exports = merge(common, {
 		new MiniCssExtractPlugin({ filename: 'main.[contentHash].css' }),
 		new CleanWebpackPlugin(),
 		new CopyPlugin([
-			{ from: 'resources/documents/Elijah Watson Resume.pdf', to: 'resources/documents/[name].[ext]', toType: 'template' }
+			{ from: 'resources/documents/Elijah Watson Resume.pdf', to: 'resources/documents/[name].[ext]', toType: 'template' },
+			{ from: 'android-chrome-192x192.png', to: '[name].[ext]', toType: 'template' },
+			{ from: 'android-chrome-384x384.png', to: '[name].[ext]', toType: 'template' },
+			{ from: 'apple-touch-icon.png', to: '[name].[ext]', toType: 'template' },
+			{ from: 'browserconfig.xml', to: '[name].[ext]', toType: 'template' },
+			{ from: 'favicon-16x16.png', to: '[name].[ext]', toType: 'template' },
+			{ from: 'favicon-32x32.png', to: '[name].[ext]', toType: 'template' },
+			{ from: 'favicon.ico', to: '[name].[ext]', toType: 'template' },
+			{ from: 'mstile-150x150.png', to: '[name].[ext]', toType: 'template' },
+			{ from: 'safari-pinned-tab.svg', to: '[name].[ext]', toType: 'template' },
+			{ from: 'site.webmanifest', to: '[name].[ext]', toType: 'template' }
 		]),
 		new HtmlWebpackPlugin({
 			template: './index.html',

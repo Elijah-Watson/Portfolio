@@ -181,6 +181,7 @@ _:-ms-lang(x),
 	line-height: 1;
 	color: hsl(0, 100%, 100%);
 	text-shadow: 0 0 0.25em hsl(0, 0%, 0%);
+	padding: 2em;
 }
 
 #home .name {
@@ -202,7 +203,7 @@ _:-ms-lang(x),
 }
 
 #about .center-content {
-	max-width: 50em;
+	max-width: 70rem;
 }
 
 #about .headshot {
@@ -257,15 +258,15 @@ _:-ms-lang(x),
 	padding: 1em;
 }
 
-.skills-box-left {
+.skills-box-general {
 	border-radius: 0.75rem 0 0 0;
 }
 
-.skills-box-right {
+.skills-box-development {
 	border-radius: 0 0.75rem 0 0;
 }
 
-.skills-box-bottom {
+.skills-box-tech {
 	flex: 1 1 100%;
 	width: 100%;
 	border-radius: 0 0 0.75rem 0.75rem;
@@ -293,10 +294,12 @@ _:-ms-lang(x),
 	position: relative;
 	width: 10em;
 	height: 10em;
+	flex: 0 0 auto;
 	text-align: center;
 	margin: 1em;
 	padding: 1em;
 
+	background-color: hsl(0, 100%, 100%);
 	border-radius: 0.5em;
 	box-shadow: 0 0.1em 0.1em 0.15em hsla(0, 0%, 0%, 0.2);
 }
@@ -328,6 +331,7 @@ _:-ms-lang(x),
 	width: 28rem;
 	height: 28rem;
 	margin: 1.5em;
+	flex: 0 0 auto;
 }
 
 .project.flipper .flipper-content {
@@ -478,4 +482,29 @@ _:-ms-lang(x),
 .footer .copyright {
 	font-size: 1.5rem;
 	margin: 1em;
+}
+
+@media only screen and (max-width: 767px) {
+	#about .center-content {
+		max-width: 60rem;
+	}
+
+	.skill-box-container {
+		flex-direction: column;
+		max-width: 60rem;
+	}
+
+	.skills-box-general {
+		border-radius: 0.75rem 0.75rem 0 0;
+	}
+
+	.skills-box-development {
+		border-radius: 0;
+	}
+}
+
+@media only screen and (max-width: 500px) {
+	html {
+		font-size: 50%;
+	}
 }

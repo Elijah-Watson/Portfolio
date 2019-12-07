@@ -10,10 +10,10 @@ export class ImageCover {
 	// If it is too tall, set width to 100%
 	formatImage() {
 		this.image.style.width = 'auto';
-		this.image.style.height = '100%';
+		this.image.style.height = 'calc(100% + 1px)';
 		
 		if (this.image.clientWidth <= this.conatiner.clientWidth) {
-			this.image.style.width = '100%';
+			this.image.style.width = 'calc(100% + 1px)';
 			this.image.style.height = 'auto';
 		}
 	}

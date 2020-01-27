@@ -411,7 +411,7 @@ _:-ms-lang(x),
 	color: hsl(210, 100%, 56%);
 	text-decoration: underline;
 	font-weight: bold;
-	animation: flick-right 750ms cubic-bezier(.55, .06, .68, .19) 250ms infinite alternate;
+	animation: flick-right 750ms cubic-bezier(.55, .06, .68, .19) infinite alternate;
 }
 
 @keyframes flick-right {

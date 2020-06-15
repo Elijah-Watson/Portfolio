@@ -496,6 +496,10 @@ _:-ms-lang(x),
 		max-width: 60rem;
 	}
 
+	.skills-box {
+		flex: auto;
+	}
+
 	.skills-box-general {
 		border-radius: 0.75rem 0.75rem 0 0;
 	}

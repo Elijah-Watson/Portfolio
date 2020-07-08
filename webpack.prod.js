@@ -31,7 +31,7 @@ module.exports = merge(common, {
 		new MiniCssExtractPlugin({ filename: 'main.[contentHash].css' }),
 		new CleanWebpackPlugin(),
 		new CopyPlugin([
-			{ from: 'resources/documents/Elijah Watson Resume.pdf', to: 'resources/documents/[name].[ext]', toType: 'template' },
+			{ from: 'resources/documents/*', to: 'resources/documents/[name].[ext]', toType: 'template' },
 			{ from: 'android-chrome-192x192.png', to: '[name].[ext]', toType: 'template' },
 			{ from: 'android-chrome-384x384.png', to: '[name].[ext]', toType: 'template' },
 			{ from: 'apple-touch-icon.png', to: '[name].[ext]', toType: 'template' },
